@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxmultibanco.LoginViewController">
+   <Pane prefHeight="600.0" prefWidth="900.0" styleClass="bg-dark" stylesheets="@css/style.css">
+      <Button layoutX="474.0" layoutY="521.0" onAction="#onBtnAnularClick" prefHeight="25.0" prefWidth="120.0" text="SAIR">
+         <styleClass>
+            <String fx:value="btn-login" />
+            <String fx:value="bg-red" />
+         </styleClass>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="608.0" layoutY="521.0" onAction="#onBtnCorrigirClick" prefHeight="25.0" prefWidth="120.0" text="CORRIGIR">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn-login" />
+            <String fx:value="bg-orange" />
+         </styleClass>
+      </Button>
+      <Button layoutX="744.0" layoutY="521.0" onAction="#onBtnContinuarClick" prefHeight="25.0" prefWidth="120.0" text="CONFIRMAR">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn-login" />
+            <String fx:value="bg-green" />
+         </styleClass>
+      </Button>
+   </Pane>
+   <ImageView fitHeight="490.0" fitWidth="900.0" pickOnBounds="true">
+      <Image url="@img/bg.png" />
+   </ImageView>
+   <PasswordField fx:id="txtPin" layoutX="663.0" layoutY="435.0" prefHeight="40.0" prefWidth="160.0" promptText="Pin:">
+      <font>
+         <Font name="System Bold" size="20.0" />
+      </font>
+   </PasswordField>
+   <TextField fx:id="txtCartao" layoutX="663.0" layoutY="380.0" prefHeight="40.0" prefWidth="160.0" promptText="Cartão:">
+      <font>
+         <Font name="System Bold" size="20.0" />
+      </font>
+   </TextField>
+</AnchorPane>

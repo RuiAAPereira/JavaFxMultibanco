@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="bg-blue" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxmultibanco.MainViewController">
+   <Label alignment="CENTER_RIGHT" layoutY="149.0" onMouseClicked="#onBtnlevantamentosClick" prefHeight="85.0" prefWidth="425.0" styleClass="btn-Labels" stylesheets="@css/style.css" text="Levantamentos">
+      <font>
+         <Font name="System Bold" size="24.0" />
+      </font>
+   </Label>
+   <Label alignment="CENTER" layoutX="14.0" layoutY="161.0" prefHeight="59.0" prefWidth="65.0" styleClass="btn-Labels-Number" stylesheets="@css/style.css" text="1">
+      <font>
+         <Font name="System Bold" size="40.0" />
+      </font>
+   </Label>
+   <Label alignment="CENTER_RIGHT" layoutY="271.0" onMouseClicked="#onBtnPagamentosClick" prefHeight="85.0" prefWidth="425.0" styleClass="btn-Labels" stylesheets="@css/style.css" text="Pagamentos">
+      <font>
+         <Font name="System Bold" size="24.0" />
+      </font>
+   </Label>
+   <Label alignment="CENTER" layoutX="14.0" layoutY="283.0" prefHeight="59.0" prefWidth="65.0" styleClass="btn-Labels-Number" stylesheets="@css/style.css" text="3">
+      <font>
+         <Font name="System Bold" size="40.0" />
+      </font>
+   </Label>
+   <Label layoutX="475.0" layoutY="149.0" onMouseClicked="#onBtnDepositosClick" prefHeight="85.0" prefWidth="425.0" styleClass="btn-Labels" stylesheets="@css/style.css" text="Depositos">
+      <font>
+         <Font name="System Bold" size="24.0" />
+      </font>
+   </Label>
+   <Label alignment="CENTER" layoutX="829.0" layoutY="160.0" prefHeight="59.0" prefWidth="65.0" styleClass="btn-Labels-Number" stylesheets="@css/style.css" text="2">
+      <font>
+         <Font name="System Bold" size="40.0" />
+      </font>
+   </Label>
+   <Label layoutX="475.0" layoutY="271.0" onMouseClicked="#onBtnMovimentosClick" prefHeight="85.0" prefWidth="425.0" styleClass="btn-Labels" stylesheets="@css/style.css" text="Movimentos">
+      <font>
+         <Font name="System Bold" size="24.0" />
+      </font>
+   </Label>
+   <Label alignment="CENTER" layoutX="829.0" layoutY="282.0" prefHeight="59.0" prefWidth="65.0" styleClass="btn-Labels-Number" stylesheets="@css/style.css" text="4">
+      <font>
+         <Font name="System Bold" size="40.0" />
+      </font>
+   </Label>
+   <Label alignment="CENTER_RIGHT" layoutY="393.0" onMouseClicked="#onBtnRetirarCartaoClick" prefHeight="85.0" prefWidth="425.0" styleClass="btn-Labels" stylesheets="@css/style.css" text="Retirar Cartão">
+      <font>
+         <Font name="System Bold" size="24.0" />
+      </font>
+   </Label>
+   <Label alignment="CENTER" layoutX="14.0" layoutY="405.0" prefHeight="59.0" prefWidth="65.0" styleClass="btn-Labels-Number" stylesheets="@css/style.css" text="5">
+      <font>
+         <Font name="System Bold" size="40.0" />
+      </font>
+   </Label>
+   <Label layoutX="475.0" layoutY="393.0" onMouseClicked="#onBtnSairClick" prefHeight="85.0" prefWidth="425.0" styleClass="btn-Labels" stylesheets="@css/style.css" text="Sair">
+      <font>
+         <Font name="System Bold" size="24.0" />
+      </font>
+   </Label>
+   <Label alignment="CENTER" layoutX="829.0" layoutY="404.0" prefHeight="59.0" prefWidth="65.0" styleClass="btn-Labels-Number" stylesheets="@css/style.css" text="0">
+      <font>
+         <Font name="System Bold" size="40.0" />
+      </font>
+   </Label>
+</AnchorPane>

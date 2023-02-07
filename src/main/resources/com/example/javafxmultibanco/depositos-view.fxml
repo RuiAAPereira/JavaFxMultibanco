@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="bg-blue" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxmultibanco.DepositosViewController">
+   <Pane layoutY="477.0" prefHeight="123.0" prefWidth="900.0" styleClass="bg-dark" stylesheets="@css/style.css">
+      <Button layoutX="467.0" layoutY="44.0" onMouseClicked="#onBtnVoltarClicked" prefHeight="25.0" prefWidth="120.0" text="VOLTAR">
+         <styleClass>
+            <String fx:value="btn-login" />
+            <String fx:value="bg-red" />
+         </styleClass>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="607.0" layoutY="44.0" onMouseClicked="#onBtnCorrigirClicked" prefHeight="25.0" prefWidth="120.0" text="CORRIGIR">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn-login" />
+            <String fx:value="bg-orange" />
+         </styleClass>
+      </Button>
+      <Button layoutX="747.0" layoutY="44.0" onMouseClicked="#onBtnConfirmarClicked" prefHeight="25.0" prefWidth="120.0" text="CONFIRMAR">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn-login" />
+            <String fx:value="bg-green" />
+         </styleClass>
+      </Button>
+   </Pane>
+   <Label layoutX="98.0" layoutY="33.0" prefHeight="135.0" prefWidth="352.0" text="DIGITE O VALOR A SER DEPOSITADO" textFill="WHITE" wrapText="true">
+      <font>
+         <Font name="Open Sans Bold" size="36.0" />
+      </font>
+   </Label>
+   <Label layoutX="472.0" layoutY="205.0" prefHeight="40.0" prefWidth="392.0" text="SALDO ATUAL:" textFill="WHITE" wrapText="true">
+      <font>
+         <Font name="Open Sans Bold" size="28.0" />
+      </font>
+   </Label>
+   <Label fx:id="lblSaldo" layoutX="472.0" layoutY="245.0" prefHeight="49.0" prefWidth="392.0" styleClass="dark-Labels" stylesheets="@css/style.css">
+      <font>
+         <Font name="Open Sans Bold" size="28.0" />
+      </font>
+   </Label>
+   <TextField fx:id="txtValor" layoutX="472.0" layoutY="355.0" prefHeight="35.0" prefWidth="392.0">
+      <font>
+         <Font name="Open Sans Bold" size="28.0" />
+      </font>
+   </TextField>
+   <Label layoutX="472.0" layoutY="315.0" prefHeight="40.0" prefWidth="392.0" text="VALOR A DEPOSITAR" textFill="WHITE" wrapText="true">
+      <font>
+         <Font name="Open Sans Bold" size="28.0" />
+      </font>
+   </Label>
+   <ImageView fitHeight="244.0" fitWidth="336.0" layoutX="119.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@img/Multibanco_icon.png" />
+      </image>
+   </ImageView>
+</AnchorPane>

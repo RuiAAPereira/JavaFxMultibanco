@@ -1,0 +1,73 @@
+.bg-blue {
+	-fx-background-color: #2e6cc2;
+}
+
+.bg-dark {
+	-fx-background-color: #1d2229;
+}
+
+.bg-red {
+	-fx-background-color: #e70000;
+}
+
+.bg-orange {
+	-fx-background-color: #ffaa00;
+}
+
+.bg-green {
+	-fx-background-color: #94e600;
+}
+
+.btn-login {
+	-fx-border-style: none;
+	-fx-background-radius: 10px;
+	-fx-text-fill: #142d52;
+	-fx-pref-width: 120;
+	-fx-pref-height: 25;
+    -fx-cursor: hand;
+}
+
+.btn-login:hover {
+	-fx-opacity: 50%;
+}
+
+.btnLoginPage {
+	-fx-border-style: none;
+	-fx-background-radius: 10px;
+}
+
+.btn-Labels {
+	-fx-background-color: #142d52;
+	-fx-background-radius: 5px;
+	-fx-padding: 15px;
+	-fx-text-fill: #bed8ff;
+	-fx-cursor: hand;
+}
+
+.dark-Labels {
+	-fx-background-color: #142d52;
+	-fx-background-radius: 5px;
+	-fx-padding: 15px;
+	-fx-text-fill: #bed8ff;
+}
+
+.btn-Labels:hover {
+	-fx-opacity: 50%;
+	-fx-border-color: rgb(231, 0, 0);
+	-fx-border-radius: 5px;
+}
+
+.btn-Labels-Number {
+	-fx-background-color: #bed8ff;
+	-fx-background-radius: 5px;
+	-fx-border-color: rgb(46, 108, 194);
+	-fx-border-radius: 5px;
+	-fx-border-width: 3px;
+	-fx-text-fill: #142d52;
+	-fx-cursor: hand;
+}
+
+.txt-error{
+    -fx-text-box-border: #B22222;
+    -fx-focus-color: #B22222;
+}
