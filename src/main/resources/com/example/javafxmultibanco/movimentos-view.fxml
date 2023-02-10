@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="bg-blue" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxmultibanco.MovimentosViewController">
+   <ImageView fitHeight="277.0" fitWidth="295.0" layoutX="99.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@img/mb_ok.png" />
+   </ImageView>
+   <Pane layoutY="497.0" prefHeight="103.0" prefWidth="900.0" styleClass="bg-dark">
+      <Label alignment="CENTER_RIGHT" layoutY="9.0" onMouseClicked="#onBtnRetirarCartaoClick" prefHeight="85.0" prefWidth="425.0" styleClass="btn-Labels" stylesheets="@css/style.css" text="Retirar Cartão">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="21.0" prefHeight="59.0" prefWidth="65.0" styleClass="btn-Labels-Number" stylesheets="@css/style.css" text="1">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="475.0" layoutY="9.0" onMouseClicked="#onBtnOutrasOperacoesClick" prefHeight="85.0" prefWidth="425.0" styleClass="btn-Labels" stylesheets="@css/style.css" text="Outras operações">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="829.0" layoutY="20.0" prefHeight="59.0" prefWidth="65.0" styleClass="btn-Labels-Number" stylesheets="@css/style.css" text="2">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+   </Pane>
+   <ScrollPane layoutX="460.0" layoutY="16.0">
+      <TextFlow fx:id="textFlow" prefHeight="467.0" prefWidth="425.0" styleClass="bg-white">
+         <padding>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="25.0"/>
+         </padding>
+      </TextFlow>
+   </ScrollPane>
+   <Label fx:id="lblMensagem" layoutX="50.0" layoutY="30.0" prefHeight="185.0" prefWidth="486.0" textFill="WHITE" wrapText="true">
+      <font>
+         <Font name="Open Sans Bold" size="40.0" />
+      </font>
+   </Label>
+</AnchorPane>

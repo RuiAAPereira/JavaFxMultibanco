@@ -52,8 +52,26 @@ public class PagamentosViewController implements Initializable {
                 saldo -= valor;
                 int id = conta.getId();
                 DataService.updateSaldo(id, saldo);
+                DataService.addMovimento(id,
+                        txtdescricao.getText(),
+                        valor,
+                        0);
                 holder.setConta(DataService.getById(id));
+                NavigatorController.setMensagem("SUCESSO.\nSALDO: "+
+                        df2.format(saldo) +"");
                 mostraSucesso(event);
+            }
+            else if (valor < 0){
+                NavigatorController.setMensagem("ERRO!.\nVALOR INVÁLIDO.");
+                mostraErro(event);
+            }
+            else if (valor > saldo){
+                NavigatorController.setMensagem("ERRO!.\nSALDO INSUFICIENTE.");
+                mostraErro(event);
+            }
+            else {
+                NavigatorController.setMensagem("ERRO DESCONHECIDO.");
+                mostraErro(event);
             }
         }
         catch (NullPointerException | NumberFormatException | SQLException ex){
@@ -66,6 +84,12 @@ public class PagamentosViewController implements Initializable {
 
     protected void mostraSucesso(MouseEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sucesso-view.fxml")));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        NavigatorController.navigate(stage,root);
+    }
+
+    protected void mostraErro(MouseEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("erro-view.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         NavigatorController.navigate(stage,root);
     }

@@ -14,11 +14,13 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class SucessoViewController implements Initializable {
+public class ErroViewController  implements Initializable {
     private Stage stage;
     private Parent root;
 
-    @FXML private Label lblMensagem;
+    @FXML
+    private Label lblMensagem;
+
     @FXML
     protected void onBtnRetirarCartaoClick(MouseEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("login-view.fxml")));

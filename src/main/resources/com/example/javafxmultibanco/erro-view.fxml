@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="bg-red" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxmultibanco.ErroViewController">
+   <ImageView fitHeight="350.0" fitWidth="615.0" layoutX="464.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@img/balao.png" />
+   </ImageView>
+   <ImageView fitHeight="277.0" fitWidth="295.0" layoutX="99.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@img/mb_sad.png" />
+   </ImageView>
+   <ImageView fitHeight="250.0" fitWidth="277.0" layoutX="596.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@img/remove-icon-png-7112.png" />
+   </ImageView>
+   <Pane layoutY="497.0" prefHeight="103.0" prefWidth="900.0" styleClass="bg-dark">
+      <Label alignment="CENTER_RIGHT" layoutY="9.0" onMouseClicked="#onBtnRetirarCartaoClick" prefHeight="85.0" prefWidth="425.0" styleClass="btn-Labels" stylesheets="@css/style.css" text="Retirar Cartão">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="21.0" prefHeight="59.0" prefWidth="65.0" styleClass="btn-Labels-Number" stylesheets="@css/style.css" text="1">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="475.0" layoutY="9.0" onMouseClicked="#onBtnOutrasOperacoesClick" prefHeight="85.0" prefWidth="425.0" styleClass="btn-Labels" stylesheets="@css/style.css" text="Outras operações">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="829.0" layoutY="20.0" prefHeight="59.0" prefWidth="65.0" styleClass="btn-Labels-Number" stylesheets="@css/style.css" text="2">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+   </Pane>
+   <Label fx:id="lblMensagem" layoutX="40.0" layoutY="20.0" prefHeight="185.0" prefWidth="486.0" text="OPERAÇÃO REALIZADA COM SUCESSO!" textFill="WHITE" wrapText="true">
+      <font>
+         <Font name="Open Sans Bold" size="40.0" />
+      </font>
+   </Label>
+</AnchorPane>

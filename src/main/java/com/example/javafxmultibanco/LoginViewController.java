@@ -42,6 +42,10 @@ public class LoginViewController implements Initializable {
         try {
             if (DataService.login(txtCartao.getText(),txtPin.getText())){
 
+                DataService.addMovimento(ContaHolder.getInstance().getConta().getId(),
+                        "Acesso ao multibanco",
+                        0,
+                        3);
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("main-view.fxml")));
                 Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                 NavigatorController.navigate(stage,root);

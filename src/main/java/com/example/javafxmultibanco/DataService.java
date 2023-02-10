@@ -2,6 +2,7 @@ package com.example.javafxmultibanco;
 
 import java.sql.*;
 import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class DataService {
 
@@ -22,7 +23,7 @@ public class DataService {
     }
 
     public static boolean login(String numero, String pin) throws SQLException {
-        ResultSet resultSet = null;
+        ResultSet resultSet;
         String query = "SELECT * FROM cartao WHERE numero = ? AND pin = ?";
         try(Connection conn = connect();
             PreparedStatement pstmt = conn.prepareStatement(query)) {
@@ -49,7 +50,7 @@ public class DataService {
     }
 
     public static Conta getById (int id) throws SQLException {
-        ResultSet resultSet = null;
+        ResultSet resultSet;
         String query = "SELECT * FROM cartao WHERE id = ?";
         try (Connection conn = connect();
                 PreparedStatement pstmt = conn.prepareStatement(query)) {
@@ -114,6 +115,38 @@ public class DataService {
         } catch (SQLException e) {
             System.out.println("Ocorreu um erro ao atualizar os movimentos do cartão com o id: "
                     + cartao_id + " : " + e.getMessage());
+        }
+    }
+
+    public static List<Movimento> getMovimentos() {
+        int cartao_id = ContaHolder.getInstance().getConta().getId();
+        ResultSet resultSet;
+        String query = "SELECT * FROM movimentos WHERE cartao_id = ?";
+        try (Connection conn = connect();
+             PreparedStatement pstmt = conn.prepareStatement(query)) {
+            pstmt.setInt(1, cartao_id);
+
+            resultSet = pstmt.executeQuery();
+            List<Movimento> movimentos = new ArrayList<>();
+
+            while(resultSet.next()) {
+                Movimento movimento = new Movimento();
+                movimento.setId(resultSet.getInt("id"));
+                movimento.setCartao_id(resultSet.getInt("cartao_id"));
+                movimento.setData(resultSet.getString("data"));
+                movimento.setDescricao(resultSet.getString("descricao"));
+                movimento.setValor(resultSet.getDouble("valor"));
+                movimento.setTipo(resultSet.getInt("tipo"));
+
+                movimentos.add(movimento);
+            }
+
+            return movimentos;
+
+        }catch (SQLException e) {
+            System.out.println("Ocorreu um erro ao procurar o cartão com o id: "
+                    + cartao_id + " : " + e.getMessage());
+            return null;
         }
     }
 

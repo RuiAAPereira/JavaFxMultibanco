@@ -5,6 +5,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class NavigatorController {
+    private static String mensagem;
     private static double xOffset = 0;
     private static double yOffset = 0;
     public static void navigate(Stage stage, Parent root) {
@@ -22,5 +23,13 @@ public class NavigatorController {
 
         stage.setScene(scene);
         stage.show();
+    }
+
+    public static void setMensagem(String msg){
+        mensagem = msg;
+    }
+
+    public static String getMensagem() {
+        return mensagem;
     }
 }
