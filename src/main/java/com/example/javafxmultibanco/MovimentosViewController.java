@@ -28,11 +28,6 @@ public class MovimentosViewController implements Initializable {
     @FXML
     private Label lblMensagem;
 
-    public MovimentosViewController() {
-
-
-
-    }
     @FXML
     protected void onBtnRetirarCartaoClick(MouseEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("login-view.fxml")));
@@ -51,24 +46,26 @@ public class MovimentosViewController implements Initializable {
         lblMensagem.setText("ULTIMOS\nMOVIMENTOS");
 
         List<Movimento> movimentos = DataService.getMovimentos();
-        Font font = Font.font("System", FontWeight.NORMAL, 16);
+        Font font = Font.font("System", FontWeight.NORMAL, 14);
         assert movimentos != null;
         for (Movimento movimento : movimentos) {
 
             if(movimento.getTipo() == 3){
                 Text t = new Text("Data: "+movimento.getData()+" - "+ movimento.getDescricao() +"\n");
                 t.setFill(Color.BLUE);
+                t.setFont(font);
                 textFlow.getChildren().add(t);
             }
             if(movimento.getTipo() == 0){
                 Text t = new Text("Data: "+movimento.getData()+" - "+ movimento.getDescricao() +
-                        " - "+movimento.getValor()+"€\n");
+                        " -"+movimento.getValor()+"€\n");
                 t.setFill(Color.RED);
+                t.setFont(font);
                 textFlow.getChildren().add(t);
             }
-            if(movimento.getTipo() == 0){
+            if(movimento.getTipo() == 1){
                 Text t = new Text("Data: "+movimento.getData()+" - "+ movimento.getDescricao() +
-                        " - "+movimento.getValor()+"€\n");
+                        " +"+movimento.getValor()+"€\n");
                 t.setFill(Color.BLACK);
                 t.setFont(font);
                 textFlow.getChildren().add(t);
